@@ -13,7 +13,7 @@ interface TaskCardProps {
 
 export function TaskCard({ task, onDeleteClick }: TaskCardProps) {
   return (
-    <div className="flex flex-col p-4 bg-white border rounded-xl border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex flex-col h-full p-4 bg-white border rounded-xl border-slate-200 dark:bg-slate-900 dark:border-slate-800 shadow-sm hover:shadow-md hover:border-slate-300 dark:hover:border-slate-700 hover:-translate-y-1 transition-all duration-300">
       <div className="flex items-start justify-between mb-3">
         <StatusBadge status={task.status} />
         <PriorityBadge priority={task.priority} />

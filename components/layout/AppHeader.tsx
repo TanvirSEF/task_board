@@ -13,7 +13,7 @@ export function AppHeader() {
   useEffect(() => setMounted(true), []);
 
   return (
-    <header className="sticky top-0 z-10 bg-white border-b border-slate-200 dark:bg-slate-950 dark:border-slate-800">
+    <header className="sticky top-0 z-10 backdrop-blur-md bg-white/80 border-b border-slate-200 dark:bg-slate-950/80 dark:border-slate-800 transition-colors">
       <div className="container flex items-center justify-between h-16 px-4 mx-auto max-w-5xl">
         <Link href="/" className="flex items-center gap-2 text-slate-900 dark:text-white">
           <CheckSquare className="w-6 h-6 text-blue-600 dark:text-blue-500" />
