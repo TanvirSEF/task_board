@@ -2,6 +2,7 @@ import { useState, useEffect, useMemo } from "react";
 import { Task, TaskStatus } from "@/types/task";
 import { loadTasks, saveTasks } from "@/lib/storage";
 import { sortTasks, TaskSortOption } from "@/utils/taskUtils";
+import { toast } from "sonner";
 
 export type TaskStatusFilter = "all" | TaskStatus;
 
@@ -28,6 +29,7 @@ export function useTasks() {
     const updatedTasks = [newTask, ...tasks];
     setTasks(updatedTasks);
     saveTasks(updatedTasks);
+    toast("Task created successfully");
   };
 
   const updateTask = (id: string, updates: Partial<Omit<Task, "id" | "createdAt" | "updatedAt">>) => {
@@ -36,12 +38,14 @@ export function useTasks() {
     );
     setTasks(updatedTasks);
     saveTasks(updatedTasks);
+    toast("Task updated successfully");
   };
 
   const deleteTask = (id: string) => {
     const updatedTasks = tasks.filter((t) => t.id !== id);
     setTasks(updatedTasks);
     saveTasks(updatedTasks);
+    toast("Task deleted");
   };
 
   const getTaskById = (id: string) => tasks.find((t) => t.id === id);
