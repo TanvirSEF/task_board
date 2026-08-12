@@ -25,11 +25,11 @@ A simple, professional, client-side Task Board application built for a React/Nex
 1. **Clone the repository**
 2. **Install dependencies**: 
    ```bash
-   npm install
+   pnpm install
    ```
 3. **Start the development server**:
    ```bash
-   npm run dev
+   pnpm run dev
    ```
 4. **Open application**: Visit `http://localhost:3000` in your browser.
 
@@ -43,8 +43,8 @@ A simple, professional, client-side Task Board application built for a React/Nex
 
 ## Scripts
 
-- `npm run dev` - Starts development server.
-- `npm run build` - Creates an optimized production build.
-- `npm start` - Starts production server.
-- `npm run lint` - Runs ESLint.
-- `npx vitest run` - Runs unit tests.
+- `pnpm run dev` - Starts development server.
+- `pnpm run build` - Creates an optimized production build.
+- `pnpm start` - Starts production server.
+- `pnpm run lint` - Runs ESLint.
+- `pnpm run test` - Runs unit tests.
